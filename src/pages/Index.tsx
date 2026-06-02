@@ -344,7 +344,7 @@ export default function Index() {
                 className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-secondary transition-colors" title="Telegram">
                 <Icon name="Send" fallback="Circle" size={15} />
               </a>
-              <a href="https://www.instagram.com/lubovetoyaa" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.instagram.com/vocalmaria" target="_blank" rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-secondary transition-colors" title="Instagram">
                 <Icon name="Instagram" fallback="Circle" size={15} />
               </a>
