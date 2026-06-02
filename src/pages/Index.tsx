@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
 
-const HERO_IMAGE = "https://cdn.poehali.dev/projects/8bc667d3-491e-4739-a4e7-c40350bcedaf/files/e23b25b7-8787-41fb-bdff-3e4b626b70d7.jpg";
+const HERO_IMAGE = "https://cdn.poehali.dev/projects/8bc667d3-491e-4739-a4e7-c40350bcedaf/bucket/3e0abf7e-88af-434e-833e-d8a8ad8e9302.jpeg";
 
 const SERVICES = [
   {
