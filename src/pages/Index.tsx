@@ -182,6 +182,31 @@ export default function Index() {
         </div>
       </section>
 
+      {/* FOR YOU */}
+      <section className="section-pad px-6 md:px-16">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-display font-light mb-12" style={{ fontSize: 'clamp(2.5rem, 8vw, 6rem)' }}>Если ты хочешь:</h2>
+          <div className="space-y-5 mb-14">
+            {[
+              "Выработать певческие навыки",
+              "Перестать бояться",
+              "Освоить вокальные приёмы и разобраться с певческим дыханием",
+              "Насладиться своим голосом или записать его в студии звукозаписи",
+            ].map((text, i) => (
+              <div key={i} className="flex gap-6 items-start">
+                <span className="font-display text-4xl font-light text-muted-foreground/40 leading-none pt-1">{i + 1}</span>
+                <p className="font-display text-xl md:text-2xl font-light leading-snug">{text}</p>
+              </div>
+            ))}
+          </div>
+          <p className="font-display text-2xl md:text-3xl font-light">То тебе ко мне — приглашаю тебя на свои занятия!</p>
+          <a href={TG_LINK} target="_blank" rel="noopener noreferrer"
+            className="inline-block mt-8 bg-foreground text-background px-10 py-3 text-sm tracking-wide hover:bg-foreground/80 transition-colors rounded">
+            Записаться
+          </a>
+        </div>
+      </section>
+
       {/* SERVICES */}
       <section id="services" className="section-pad px-6 md:px-16">
         <div className="max-w-6xl mx-auto">
