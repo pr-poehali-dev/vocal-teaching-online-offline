@@ -345,9 +345,10 @@ export default function Index() {
                   className="w-full border border-border rounded px-4 py-2.5 text-sm bg-background focus:outline-none focus:border-foreground transition-colors" />
                 <input placeholder="Телефон или @telegram"
                   className="w-full border border-border rounded px-4 py-2.5 text-sm bg-background focus:outline-none focus:border-foreground transition-colors" />
-                <button className="w-full bg-foreground text-background py-3 text-sm rounded hover:bg-foreground/80 transition-colors">
+                <a href={TG_LINK} target="_blank" rel="noopener noreferrer"
+                  className="block w-full text-center bg-foreground text-background py-3 text-sm rounded hover:bg-foreground/80 transition-colors">
                   Записаться на пробный урок
-                </button>
+                </a>
               </div>
             </div>
           </div>
