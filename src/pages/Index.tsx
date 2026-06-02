@@ -48,6 +48,8 @@ const SLOTS: Record<string, Record<string, boolean>> = {
   },
 };
 
+const TG_LINK = "https://t.me/lubovetoyaa";
+
 const NAV_ITEMS = [
   { label: "Главная", href: "#home" },
   { label: "Услуги", href: "#services" },
@@ -122,10 +124,10 @@ export default function Index() {
 
           {/* Кнопка под фото (мобильная версия) */}
           <div className="md:hidden mb-8 animate-fade-up opacity-0 delay-400">
-            <button onClick={() => scrollTo("#schedule")}
-              className="w-full bg-foreground text-background px-8 py-3 text-sm tracking-wide hover:bg-foreground/80 transition-colors rounded">
+            <a href={TG_LINK} target="_blank" rel="noopener noreferrer"
+              className="block w-full text-center bg-foreground text-background px-8 py-3 text-sm tracking-wide hover:bg-foreground/80 transition-colors rounded">
               Записаться на урок
-            </button>
+            </a>
           </div>
 
           <p className="font-display text-xl md:text-2xl font-light text-muted-foreground mb-4 animate-fade-up opacity-0 delay-300">
@@ -135,10 +137,10 @@ export default function Index() {
             Индивидуальные уроки вокала для взрослых и детей. Онлайн и офлайн.
           </p>
           <div className="hidden md:flex flex-col sm:flex-row gap-3 animate-fade-up opacity-0 delay-400">
-            <button onClick={() => scrollTo("#schedule")}
-              className="bg-foreground text-background px-8 py-3 text-sm tracking-wide hover:bg-foreground/80 transition-colors rounded">
+            <a href={TG_LINK} target="_blank" rel="noopener noreferrer"
+              className="bg-foreground text-background px-8 py-3 text-sm tracking-wide hover:bg-foreground/80 transition-colors rounded text-center">
               Записаться на урок
-            </button>
+            </a>
             <button onClick={() => scrollTo("#services")}
               className="border border-border px-8 py-3 text-sm tracking-wide hover:bg-secondary transition-colors rounded">
               Узнать об услугах
@@ -174,10 +176,10 @@ export default function Index() {
                 style={{ animationDelay: `${i * 0.1}s` }}>
                 <h3 className="font-display text-2xl font-light">{s.title}</h3>
                 <div className="font-display text-4xl font-semibold">{s.price}</div>
-                <button onClick={() => scrollTo("#schedule")}
-                  className="mt-2 w-full border border-foreground text-foreground text-sm py-2 rounded hover:bg-foreground hover:text-background transition-colors">
+                <a href={TG_LINK} target="_blank" rel="noopener noreferrer"
+                  className="mt-2 w-full border border-foreground text-foreground text-sm py-2 rounded hover:bg-foreground hover:text-background transition-colors text-center block">
                   Записаться
-                </button>
+                </a>
               </div>
             ))}
           </div>
