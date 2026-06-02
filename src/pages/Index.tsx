@@ -120,6 +120,9 @@ export default function Index() {
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-light leading-tight mb-6 animate-fade-up opacity-0 delay-200">
             Ираева<br />Мария
           </h1>
+          <p className="font-display text-xl md:text-2xl font-light text-muted-foreground mb-4 animate-fade-up opacity-0 delay-300">
+            Твой педагог по вокалу
+          </p>
           <p className="text-muted-foreground max-w-md leading-relaxed mb-10 animate-fade-up opacity-0 delay-300">
             Индивидуальные уроки вокала для взрослых и детей. Академический, эстрадный, джаз — выбери свой стиль.
           </p>
