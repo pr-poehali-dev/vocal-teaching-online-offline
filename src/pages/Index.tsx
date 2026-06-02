@@ -167,7 +167,8 @@ export default function Index() {
         <div className="max-w-6xl mx-auto">
           <div className="mb-14">
             <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-3">Что предлагаем</p>
-            <h2 className="font-display text-4xl md:text-5xl font-light">Услуги</h2>
+            <h2 className="font-display text-4xl md:text-5xl font-light mb-4">Услуги</h2>
+            <p className="text-muted-foreground text-base">Я предлагаю вам свои индивидуальные уроки по вокалу</p>
           </div>
           <div className="grid sm:grid-cols-3 gap-6">
             {SERVICES.map((s, i) => (
