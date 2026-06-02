@@ -6,31 +6,23 @@ const HERO_IMAGE = "https://cdn.poehali.dev/projects/8bc667d3-491e-4739-a4e7-c40
 const SERVICES = [
   {
     title: "Пробный урок",
-    desc: "",
     price: "500 ₽",
-    duration: "",
-    format: "",
+    duration: "30 мин",
   },
   {
     title: "1 занятие",
-    desc: "",
     price: "1 700 ₽",
-    duration: "",
-    format: "",
+    duration: "55 мин",
   },
   {
     title: "4 занятия",
-    desc: "",
     price: "6 000 ₽",
-    duration: "",
-    format: "",
+    duration: "55 мин",
   },
   {
     title: "8 занятий",
-    desc: "",
     price: "10 400 ₽",
-    duration: "",
-    format: "",
+    duration: "55 мин",
   },
 ];
 
@@ -177,12 +169,13 @@ export default function Index() {
             <h2 className="font-display text-4xl md:text-5xl font-light mb-4">Услуги</h2>
             <p className="text-muted-foreground text-base">Я предлагаю вам свои индивидуальные уроки по вокалу</p>
           </div>
-          <div className="grid sm:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-4 gap-6">
             {SERVICES.map((s, i) => (
               <div key={s.title}
-                className="border border-border rounded p-8 flex flex-col items-center text-center gap-4 hover:shadow-md transition-shadow bg-card"
+                className="border border-border rounded p-8 flex flex-col items-center text-center gap-3 hover:shadow-md transition-shadow bg-card"
                 style={{ animationDelay: `${i * 0.1}s` }}>
                 <h3 className="font-display text-2xl font-light">{s.title}</h3>
+                <div className="text-sm text-muted-foreground">{s.duration}</div>
                 <div className="font-display text-4xl font-semibold">{s.price}</div>
                 <a href={TG_LINK} target="_blank" rel="noopener noreferrer"
                   className="mt-2 w-full border border-foreground text-foreground text-sm py-2 rounded hover:bg-foreground hover:text-background transition-colors text-center block">
