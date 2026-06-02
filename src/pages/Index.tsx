@@ -5,6 +5,13 @@ const HERO_IMAGE = "https://cdn.poehali.dev/projects/8bc667d3-491e-4739-a4e7-c40
 
 const SERVICES = [
   {
+    title: "Пробный урок",
+    desc: "",
+    price: "500 ₽",
+    duration: "",
+    format: "",
+  },
+  {
     title: "1 занятие",
     desc: "",
     price: "1 700 ₽",
