@@ -124,7 +124,7 @@ export default function Index() {
             Твой педагог по вокалу
           </p>
           <p className="text-muted-foreground max-w-md leading-relaxed mb-10 animate-fade-up opacity-0 delay-300">
-            Индивидуальные уроки вокала для взрослых и детей. Академический, эстрадный, джаз — выбери свой стиль.
+            Индивидуальные уроки вокала для взрослых и детей. Онлайн и офлайн.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 animate-fade-up opacity-0 delay-400">
             <button onClick={() => scrollTo("#schedule")}
