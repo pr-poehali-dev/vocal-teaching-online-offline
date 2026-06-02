@@ -120,6 +120,12 @@ export default function Index() {
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-light leading-tight mb-6 animate-fade-up opacity-0 delay-200">
             Ираева<br />Мария
           </h1>
+
+          {/* Фото под именем (мобильная версия) */}
+          <div className="md:hidden w-full rounded overflow-hidden mb-6 animate-fade-up opacity-0 delay-300" style={{ maxHeight: 360 }}>
+            <img src={HERO_IMAGE} alt="Ираева Мария" className="w-full h-full object-cover object-top" style={{ maxHeight: 360 }} />
+          </div>
+
           <p className="font-display text-xl md:text-2xl font-light text-muted-foreground mb-4 animate-fade-up opacity-0 delay-300">
             Твой педагог по вокалу
           </p>
@@ -145,7 +151,7 @@ export default function Index() {
             ))}
           </div>
         </div>
-        <div className="flex-1 relative overflow-hidden min-h-[400px] md:min-h-0">
+        <div className="hidden md:block flex-1 relative overflow-hidden min-h-[400px] md:min-h-0">
           <img src={HERO_IMAGE} alt="Ираева Мария"
             className="absolute inset-0 w-full h-full object-cover object-top" />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/5 to-transparent" />
