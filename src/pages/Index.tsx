@@ -126,13 +126,21 @@ export default function Index() {
             <img src={HERO_IMAGE} alt="Ираева Мария" className="w-full h-full object-cover object-top" style={{ maxHeight: 360 }} />
           </div>
 
+          {/* Кнопка под фото (мобильная версия) */}
+          <div className="md:hidden mb-8 animate-fade-up opacity-0 delay-400">
+            <button onClick={() => scrollTo("#schedule")}
+              className="w-full bg-foreground text-background px-8 py-3 text-sm tracking-wide hover:bg-foreground/80 transition-colors rounded">
+              Записаться на урок
+            </button>
+          </div>
+
           <p className="font-display text-xl md:text-2xl font-light text-muted-foreground mb-4 animate-fade-up opacity-0 delay-300">
             Твой педагог по вокалу
           </p>
           <p className="text-muted-foreground max-w-md leading-relaxed mb-10 animate-fade-up opacity-0 delay-300">
             Индивидуальные уроки вокала для взрослых и детей. Онлайн и офлайн.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 animate-fade-up opacity-0 delay-400">
+          <div className="hidden md:flex flex-col sm:flex-row gap-3 animate-fade-up opacity-0 delay-400">
             <button onClick={() => scrollTo("#schedule")}
               className="bg-foreground text-background px-8 py-3 text-sm tracking-wide hover:bg-foreground/80 transition-colors rounded">
               Записаться на урок
