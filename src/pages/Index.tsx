@@ -51,6 +51,7 @@ const TG_LINK = "https://t.me/lubovetoyaa";
 
 const NAV_ITEMS = [
   { label: "Главная", href: "#home" },
+  { label: "Обо мне", href: "#about" },
   { label: "Услуги", href: "#services" },
   { label: "Расписание", href: "#schedule" },
   { label: "Контакты", href: "#contacts" },
@@ -158,6 +159,26 @@ export default function Index() {
           <img src={HERO_IMAGE} alt="Ираева Мария"
             className="absolute inset-0 w-full h-full object-cover object-top" />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/5 to-transparent" />
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section id="about" className="section-pad px-6 md:px-16 bg-secondary/40">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-display font-light mb-12" style={{ fontSize: 'clamp(3rem, 10vw, 7rem)' }}>Обо мне</h2>
+          <div className="space-y-6">
+            {[
+              "Меня зовут Мария, я вокалистка и преподаватель эстрадного вокала.",
+              "Преподаю вокал по методике EVT.",
+              "Прохожу обучения и повышаю уровень своих знаний.",
+              "Был опыт выступления на телевидении.",
+            ].map((text, i) => (
+              <div key={i} className="flex gap-6 items-start">
+                <span className="font-display text-4xl font-light text-muted-foreground/40 leading-none pt-1">{i + 1}</span>
+                <p className="font-display text-xl md:text-2xl font-light leading-snug">{text}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
