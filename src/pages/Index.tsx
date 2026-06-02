@@ -5,32 +5,25 @@ const HERO_IMAGE = "https://cdn.poehali.dev/projects/8bc667d3-491e-4739-a4e7-c40
 
 const SERVICES = [
   {
-    title: "Индивидуальные уроки",
-    desc: "Персональная программа под ваш голос и цели. Работа с техникой, репертуаром и сценическим образом.",
-    price: "от 2 500 ₽",
-    duration: "60 мин",
-    format: "онлайн / офлайн",
+    title: "1 занятие",
+    desc: "",
+    price: "1 700 ₽",
+    duration: "",
+    format: "",
   },
   {
-    title: "Экспресс-урок",
-    desc: "Быстрое занятие для решения конкретной задачи: вокализация, работа с зажимами, подготовка к выступлению.",
-    price: "от 1 500 ₽",
-    duration: "30 мин",
-    format: "онлайн / офлайн",
+    title: "4 занятия",
+    desc: "",
+    price: "6 000 ₽",
+    duration: "",
+    format: "",
   },
   {
-    title: "Абонемент × 8",
-    desc: "8 занятий со скидкой. Идеально для регулярного обучения и устойчивого прогресса.",
-    price: "от 18 000 ₽",
-    duration: "60 мин",
-    format: "онлайн / офлайн",
-  },
-  {
-    title: "Детский вокал",
-    desc: "Занятия для детей от 6 лет. Игровой подход, развитие слуха, постановка голоса.",
-    price: "от 2 000 ₽",
-    duration: "45 мин",
-    format: "онлайн / офлайн",
+    title: "8 занятий",
+    desc: "",
+    price: "10 400 ₽",
+    duration: "",
+    format: "",
   },
 ];
 
@@ -174,27 +167,13 @@ export default function Index() {
             <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-3">Что предлагаем</p>
             <h2 className="font-display text-4xl md:text-5xl font-light">Услуги</h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-3 gap-6">
             {SERVICES.map((s, i) => (
               <div key={s.title}
-                className="border border-border rounded p-6 flex flex-col gap-4 hover:shadow-md transition-shadow bg-card"
+                className="border border-border rounded p-8 flex flex-col items-center text-center gap-4 hover:shadow-md transition-shadow bg-card"
                 style={{ animationDelay: `${i * 0.1}s` }}>
-                <h3 className="font-display text-xl font-medium">{s.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed flex-1">{s.desc}</p>
-                <div className="pt-4 border-t border-border space-y-1">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Стоимость</span>
-                    <span className="font-medium">{s.price}</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Длительность</span>
-                    <span>{s.duration}</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Формат</span>
-                    <span>{s.format}</span>
-                  </div>
-                </div>
+                <h3 className="font-display text-2xl font-light">{s.title}</h3>
+                <div className="font-display text-4xl font-semibold">{s.price}</div>
                 <button onClick={() => scrollTo("#schedule")}
                   className="mt-2 w-full border border-foreground text-foreground text-sm py-2 rounded hover:bg-foreground hover:text-background transition-colors">
                   Записаться
