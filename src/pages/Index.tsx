@@ -134,7 +134,7 @@ export default function Index() {
             </button>
           </div>
           <div className="flex gap-10 mt-16 animate-fade-up opacity-0 delay-500">
-            {[["5+", "лет опыта"], ["200+", "учеников"], ["2", "педагога"]].map(([n, l]) => (
+            {[["+5", "лет опыта"], ["+200", "учеников"], ["2", "педагога"]].map(([n, l]) => (
               <div key={l}>
                 <div className="font-display text-3xl font-semibold">{n}</div>
                 <div className="text-xs text-muted-foreground mt-1">{l}</div>
