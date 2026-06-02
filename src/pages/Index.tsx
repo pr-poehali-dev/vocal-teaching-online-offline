@@ -321,59 +321,33 @@ export default function Index() {
       <section id="contacts" className="section-pad px-6 md:px-16">
         <div className="max-w-6xl mx-auto">
           <div className="mb-14">
-            <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-3">Как нас найти</p>
+            <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-3">Как меня найти</p>
             <h2 className="font-display text-4xl md:text-5xl font-light">Контакты</h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-8">
-              {[
-                { icon: "MapPin", label: "Адрес", value: "Москва, ул. Примерная, 12\nст. м. Пушкинская" },
-                { icon: "Phone", label: "Телефон", value: "+7 (999) 000-00-00" },
-                { icon: "Mail", label: "Email", value: "hello@vocalstudio.ru" },
-                { icon: "Clock", label: "Часы работы", value: "Пн–Сб: 10:00 – 21:00\nВс: 11:00 – 18:00" },
-              ].map(c => (
-                <div key={c.label} className="flex gap-4">
-                  <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
-                    <Icon name={c.icon} fallback="Circle" size={16} className="text-muted-foreground" />
-                  </div>
-                  <div>
-                    <div className="text-xs text-muted-foreground mb-1">{c.label}</div>
-                    <div className="text-sm whitespace-pre-line">{c.value}</div>
-                  </div>
+          <div className="space-y-8 max-w-md">
+            {[
+              { icon: "MapPin", label: "Адрес", value: "Высоковольтная 1А, 2 этаж" },
+              { icon: "Phone", label: "Телефон", value: "8 987 497 28 49" },
+            ].map(c => (
+              <div key={c.label} className="flex gap-4">
+                <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
+                  <Icon name={c.icon} fallback="Circle" size={16} className="text-muted-foreground" />
                 </div>
-              ))}
-              <div className="flex gap-3 pt-2">
-                {[
-                  { icon: "Send", label: "Telegram" },
-                  { icon: "Instagram", label: "Instagram" },
-                  { icon: "Youtube", label: "YouTube" },
-                ].map(s => (
-                  <button key={s.label}
-                    className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-secondary transition-colors"
-                    title={s.label}>
-                    <Icon name={s.icon} fallback="Circle" size={15} />
-                  </button>
-                ))}
+                <div>
+                  <div className="text-xs text-muted-foreground mb-1">{c.label}</div>
+                  <div className="text-sm whitespace-pre-line">{c.value}</div>
+                </div>
               </div>
-            </div>
-
-            <div className="bg-secondary/40 rounded border border-border p-8 flex flex-col justify-between gap-6">
-              <div>
-                <h3 className="font-display text-2xl mb-2">Бесплатный пробный урок</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Познакомимся, определим ваш уровень и цели — совершенно бесплатно.
-                </p>
-              </div>
-              <div className="space-y-3">
-                <input placeholder="Ваше имя"
-                  className="w-full border border-border rounded px-4 py-2.5 text-sm bg-background focus:outline-none focus:border-foreground transition-colors" />
-                <input placeholder="Телефон или @telegram"
-                  className="w-full border border-border rounded px-4 py-2.5 text-sm bg-background focus:outline-none focus:border-foreground transition-colors" />
-                <a href={TG_LINK} target="_blank" rel="noopener noreferrer"
-                  className="block w-full text-center bg-foreground text-background py-3 text-sm rounded hover:bg-foreground/80 transition-colors">
-                  Записаться на пробный урок
-                </a>
-              </div>
+            ))}
+            <div className="flex gap-3 pt-2">
+              <a href={TG_LINK} target="_blank" rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-secondary transition-colors" title="Telegram">
+                <Icon name="Send" fallback="Circle" size={15} />
+              </a>
+              <a href="https://www.instagram.com/lubovetoyaa" target="_blank" rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-secondary transition-colors" title="Instagram">
+                <Icon name="Instagram" fallback="Circle" size={15} />
+              </a>
             </div>
           </div>
         </div>
