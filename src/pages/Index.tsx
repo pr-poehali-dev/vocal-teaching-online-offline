@@ -145,9 +145,9 @@ export default function Index() {
             ))}
           </div>
         </div>
-        <div className="hidden md:block flex-1 relative overflow-hidden">
-          <img src={HERO_IMAGE} alt="Урок вокала"
-            className="absolute inset-0 w-full h-full object-cover" />
+        <div className="flex-1 relative overflow-hidden min-h-[400px] md:min-h-0">
+          <img src={HERO_IMAGE} alt="Ираева Мария"
+            className="absolute inset-0 w-full h-full object-cover object-top" />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/5 to-transparent" />
         </div>
       </section>
