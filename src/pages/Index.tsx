@@ -18,11 +18,13 @@ const SERVICES = [
     title: "4 занятия",
     price: "6 000 ₽",
     duration: "55 мин",
+    note: "1 500 ₽ за 1 урок",
   },
   {
     title: "8 занятий",
     price: "10 400 ₽",
     duration: "55 мин",
+    note: "1 300 ₽ за 1 урок",
   },
 ];
 
@@ -213,6 +215,9 @@ export default function Index() {
                 <h3 className="font-display text-2xl font-light">{s.title}</h3>
                 <div className="text-sm text-muted-foreground">{s.duration}</div>
                 <div className="font-display text-4xl font-semibold">{s.price}</div>
+                {'note' in s && s.note && (
+                  <div className="text-xs text-muted-foreground">({s.note})</div>
+                )}
                 <a href={TG_LINK} target="_blank" rel="noopener noreferrer"
                   className="mt-2 w-full border border-foreground text-foreground text-sm py-2 rounded hover:bg-foreground hover:text-background transition-colors text-center block">
                   Записаться
