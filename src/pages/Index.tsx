@@ -26,26 +26,17 @@ const SERVICES = [
   },
 ];
 
-const TEACHERS = [
-  { name: "Анна Соколова", spec: "Академический / эстрадный" },
-  { name: "Дмитрий Орлов", spec: "Джаз / блюз / соул" },
-];
 
-const DAYS = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
-const TIMES = ["10:00", "11:00", "12:00", "13:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00"];
+const DAYS = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб"];
+const WEEKDAY_TIMES = ["11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00"];
+const SAT_TIMES = ["14:00", "15:00", "16:00", "17:00", "18:00"];
+const TIMES = WEEKDAY_TIMES;
 
-const SLOTS: Record<string, Record<string, boolean>> = {
-  "Анна Соколова": {
-    "Пн-10:00": true, "Пн-12:00": true, "Вт-11:00": true, "Вт-16:00": true,
-    "Ср-10:00": true, "Чт-15:00": true, "Пт-18:00": true, "Пт-19:00": true,
-    "Сб-11:00": true, "Сб-13:00": true,
-  },
-  "Дмитрий Орлов": {
-    "Пн-18:00": true, "Пн-19:00": true, "Вт-17:00": true, "Ср-16:00": true,
-    "Ср-18:00": true, "Чт-10:00": true, "Чт-19:00": true, "Пт-11:00": true,
-    "Сб-15:00": true, "Вс-12:00": true,
-  },
-};
+const SLOTS: Record<string, boolean> = {};
+["Пн", "Вт", "Ср", "Чт", "Пт"].forEach(day => {
+  WEEKDAY_TIMES.forEach(time => { SLOTS[`${day}-${time}`] = true; });
+});
+SAT_TIMES.forEach(time => { SLOTS[`Сб-${time}`] = true; });
 
 const TG_LINK = "https://t.me/lubovetoyaa";
 
@@ -58,13 +49,12 @@ const NAV_ITEMS = [
 ];
 
 export default function Index() {
-  const [activeTeacher, setActiveTeacher] = useState(TEACHERS[0].name);
   const [selectedSlot, setSelectedSlot] = useState<string | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [bookingDone, setBookingDone] = useState(false);
   const [form, setForm] = useState({ name: "", phone: "" });
 
-  const slots = SLOTS[activeTeacher] || {};
+  const slots = SLOTS;
 
   function scrollTo(href: string) {
     setMenuOpen(false);
@@ -241,19 +231,6 @@ export default function Index() {
             <h2 className="font-display text-4xl md:text-5xl font-light">Расписание и запись</h2>
           </div>
 
-          <div className="flex gap-3 mb-8 flex-wrap">
-            {TEACHERS.map(t => (
-              <button key={t.name}
-                onClick={() => { setActiveTeacher(t.name); setSelectedSlot(null); }}
-                className={`px-5 py-2.5 rounded text-sm transition-colors border ${activeTeacher === t.name
-                  ? "bg-foreground text-background border-foreground"
-                  : "border-border bg-background hover:bg-secondary"}`}>
-                <span className="font-medium">{t.name}</span>
-                <span className="ml-2 text-xs opacity-60">{t.spec}</span>
-              </button>
-            ))}
-          </div>
-
           <div className="bg-background rounded border border-border overflow-x-auto">
             <table className="w-full min-w-[600px]">
               <thead>
@@ -298,7 +275,7 @@ export default function Index() {
             <div className="mt-8 bg-background border border-border rounded p-6 max-w-md animate-fade-up opacity-0" style={{ animationFillMode: "forwards" }}>
               <h3 className="font-display text-xl mb-1">Запись на урок</h3>
               <p className="text-sm text-muted-foreground mb-5">
-                {activeTeacher} · {selectedSlot.replace("-", " в ")}
+                {selectedSlot.replace("-", " в ")}
               </p>
               <div className="space-y-3">
                 <input
