@@ -117,8 +117,9 @@ export default function Index() {
           <p className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground mb-6 animate-fade-up opacity-0 delay-100">
             Вокальная школа · Онлайн и офлайн
           </p>
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-light leading-tight mb-6 animate-fade-up opacity-0 delay-200">
-            Ираева<br />Мария
+          <h1 className="font-display font-light leading-tight mb-6 animate-fade-up opacity-0 delay-200" style={{ fontSize: 'clamp(2.5rem, 10vw, 7rem)', textAlign: 'justify', textAlignLast: 'justify' }}>
+            <span className="block w-full" style={{ textAlign: 'justify', textAlignLast: 'justify' }}>Ираева</span>
+            <span className="block w-full" style={{ textAlign: 'justify', textAlignLast: 'justify' }}>Мария</span>
           </h1>
 
           {/* Фото под именем (мобильная версия) */}
